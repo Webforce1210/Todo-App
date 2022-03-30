@@ -9,10 +9,7 @@ jobs:
   unit_tests:
     runs-on: ubuntu-latest
     steps:
-       - run: if [ $(( 4 % 4 )) -eq 0 ]; then                                
-                echo "I'm here"
-              fi
-
+       - run: echo "unit_tests stage"
        
   integration_tests:
     runs-on: ubuntu-latest
