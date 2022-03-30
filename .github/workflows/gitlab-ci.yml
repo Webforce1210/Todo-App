@@ -1,0 +1,29 @@
+on: [push]
+
+jobs:
+  build:
+     runs-on: ubuntu-latest
+     steps:
+       - run: echo "build stage"
+       
+  unit_tests:
+    runs-on: ubuntu-latest
+    steps:
+       - run: echo "unit_tests stage"
+       
+  integration_tests:
+    runs-on: ubuntu-latest
+    steps:
+       - run: echo "integration_tests stage"
+       
+  end_to_end_tests:
+     runs-on: ubuntu-latest
+     steps:
+       - run: echo "end_to_end_tests  stage"
+       
+  
+
+
+
+
+
