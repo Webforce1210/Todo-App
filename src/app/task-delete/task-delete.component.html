@@ -1,0 +1,16 @@
+<div class="text-center">
+    <button class="btn btn-danger m-2" (click)= "activated()">Tache terminer</button>
+</div>
+
+<div class="card-group d-flex flex-wrap" *ngIf ="active" >
+    <div class="row align-items-start" *ngFor = "let tasks of deletetache">
+        <div class="col p-4">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                <h5 class="card-title">{{tasks.title}}</h5>
+                <p class="card-text">{{tasks.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

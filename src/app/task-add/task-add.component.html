@@ -1,0 +1,12 @@
+<div class="mb-3 p-4">
+    <label for="exampleFormControlInput1" class="form-label">Title</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" [formControl]="titleValue">
+  </div>
+  <div class="mb-3 p-4">
+    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+    <textarea class="form-control"  id="exampleFormControlTextarea1" rows="3" [formControl]="descriptionValue"></textarea>
+  </div>
+  <div class="text-center">
+    <button class="btn btn-success" (click) = "add()" >Créer Tache</button>
+    <button class="btn btn-danger m-2 "[routerLink]="['/tasks']">Annuler</button>
+  </div>

@@ -1,0 +1,23 @@
+<div class="text-center">
+    <button class="btn btn-success m-2" [routerLink]="['/tasks/add']" >Ajouter une tache</button>
+</div>
+
+
+<div class="card-group d-flex flex-wrap">
+    <div class="row align-items-start" *ngFor = "let tache of currentsTaches">
+        <div class="col p-4">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                <h5 class="card-title">{{tache.title}}</h5>
+                <p class="card-text">{{tache.description}}</p>
+                <button class="btn btn-primary m-2" (click)="deleteTask(tache.id)"
+                >Tâche terminée</button>
+                <button class="btn btn-primary m-2" [routerLink]="['/tasks/', tache.id]"
+                >Voir la tâche</button>
+                <button class="btn btn-primary m-2" [routerLink]="['/tasks/edit/', tache.id ]">Modifier la tâche</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-task-delete></app-task-delete>

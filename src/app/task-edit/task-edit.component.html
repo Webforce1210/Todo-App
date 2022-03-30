@@ -1,0 +1,14 @@
+
+<div class="mb-3 p-4">
+    <label for="exampleFormControlInput1" class="form-label">Modifier votre titre</label>
+    <textarea class="form-control"  id="exampleFormControlTextarea1"[formControl]="titleValue" ></textarea>
+</div>
+<div class="mb-3 p-4">
+    <label for="exampleFormControlTextarea1" class="form-label">Modifier votre description</label>
+    <textarea class="form-control"  id="exampleFormControlTextarea1" rows="3" [formControl]="descriptionValue"></textarea>
+</div>
+<div class="text-center">
+    <button class="btn btn-success" (click)="updateTask()" >Mettre à jour</button>
+    <button class="btn btn-danger m-2" [routerLink]= "['/tasks']" >Annuler</button>
+</div>
+<!-- // 3) on affiche les données de notre task dans notre Template.html et dans nos champs de saisie -->
