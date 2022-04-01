@@ -4,22 +4,20 @@ jobs:
   build:
      runs-on: ubuntu-latest
      steps:
-       - run: echo "build stage"
-       
+       - run: npm install 
+       - run: ng serve
   unit_tests:
     runs-on: ubuntu-latest
     steps:
-       - run: echo "unit_tests stage"
-       
-  integration_tests:
-    runs-on: ubuntu-latest
-    steps:
-       - run: echo "integration_tests stage"
+       - run: npm install
+       - run: npm run unit_test
        
   end_to_end_tests:
      runs-on: ubuntu-latest
      steps:
-       - run: echo "end_to_end_tests  stage"
+       - run: npm install 
+       - run: npm install -g testcafe
+       - run: npm run e2e_test
        
   
 
