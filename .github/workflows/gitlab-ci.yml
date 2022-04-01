@@ -15,7 +15,7 @@ jobs:
             npm ci
      - name: Install angular
        run: npm install -g @angular/cli
-     - name: Runing application
+     - name: Running application
        run: ng build
   unit_tests:
     runs-on: ubuntu-latest
