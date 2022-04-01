@@ -13,10 +13,12 @@ jobs:
      - name: Install Dependencies
        run: | 
             npm ci
+     - name: Runing application
+       run: ng serve
   unit_tests:
     runs-on: ubuntu-latest
     steps:
-       - run: echo"ok 1"
+       - run: echo "ok 1"
        
   end_to_end_tests:
      runs-on: ubuntu-latest
