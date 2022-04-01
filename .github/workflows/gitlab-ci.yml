@@ -20,8 +20,19 @@ jobs:
   unit_tests:
     runs-on: ubuntu-latest
     steps:
-       - run: echo "ok 1"
-       
+     - name: Checkout Code
+       uses: actions/checkout@v2
+     - name: Install Node.js, NPM and Yarn
+       uses: actions/setup-node@v1
+       with:
+          node-version: 16
+     - name: Install Dependencies
+       run: | 
+            npm ci
+     - name: Install angular
+       run: npm install -g @angular/cli
+     - name: Running unit_tests
+       run: npm run unit_test
   end_to_end_tests:
      runs-on: ubuntu-latest
      steps:
