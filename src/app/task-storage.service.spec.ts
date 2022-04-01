@@ -1,16 +1,17 @@
-import { TestBed } from '@angular/core/testing';
 
 import { TaskStorageService } from './task-storage.service';
 
-describe('TaskStorageService', () => {
-  let service: TaskStorageService;
+test('Task-storage Revification',()=>{
+  expect(1).toBeTruthy()
+})
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(TaskStorageService);
-  });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+
+  test('Init test',()=>{
+
+    const storage= new TaskStorageService();
+    storage.init();
+    expect(storage.initialized).toBe(true),
+    expect(storage.tasks).toEqual([{id: '1', title: 'Tache1', description: 'Description1'},{id: '2', title: 'Tache2', description: 'Description2'},{id: '3', title: 'Tache3', description: 'Description3'},{id: '4', title: 'Tache4', description: 'Description4'}])
+  })
+
