@@ -31,13 +31,3 @@ jobs:
             npm ci
      - name: Running unit_tests
        run: npm run unit_test
-  end_to_end_tests:
-     runs-on: ubuntu-latest
-     steps:
-       - run: echo "ok 2"
-  
-
-
-
-
-
