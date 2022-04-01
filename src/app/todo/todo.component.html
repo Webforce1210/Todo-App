@@ -1,5 +1,5 @@
 <div class="text-center">
-    <button class="btn btn-success m-2" [routerLink]="['/tasks/add']" >Ajouter une tache</button>
+    <button class="btn btn-success m-2" id="add" [routerLink]="['/tasks/add']" >Ajouter une tache</button>
 </div>
 
 
@@ -10,7 +10,7 @@
                 <div class="card-body">
                 <h5 class="card-title">{{tache.title}}</h5>
                 <p class="card-text">{{tache.description}}</p>
-                <button class="btn btn-primary m-2" (click)="deleteTask(tache.id)"
+                <button class="btn btn-primary m-2" id="{{ 'delete-' + tache.id}}" (click)="deleteTask(tache.id)"
                 >Tâche terminée</button>
                 <button class="btn btn-primary m-2" [routerLink]="['/tasks/', tache.id]"
                 >Voir la tâche</button>

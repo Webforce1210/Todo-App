@@ -75,6 +75,7 @@ getTasks(){
     }
     return task;
   }
+
 update(task:Task | null){
 
   for(let i=0;i<this.tasks.length;i++){

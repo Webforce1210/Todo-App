@@ -4,26 +4,30 @@ jobs:
   build:
      runs-on: ubuntu-latest
      steps:
-       - run: echo "build stage"
-       
+     - name: Checkout Code
+       uses: actions/checkout@v2
+     - name: Install Node.js, NPM and Yarn
+       uses: actions/setup-node@v1
+       with:
+          node-version: 16
+     - name: Install Dependencies
+       run: | 
+            npm ci
+     - name: Install angular
+       run: npm install -g @angular/cli
+     - name: Running application
+       run: ng build
   unit_tests:
     runs-on: ubuntu-latest
     steps:
-       - run: echo "unit_tests stage"
-       
-  integration_tests:
-    runs-on: ubuntu-latest
-    steps:
-       - run: echo "integration_tests stage"
-       
-  end_to_end_tests:
-     runs-on: ubuntu-latest
-     steps:
-       - run: echo "end_to_end_tests  stage"
-       
-  
-
-
-
-
-
+     - name: Checkout Code
+       uses: actions/checkout@v2
+     - name: Install Node.js, NPM and Yarn
+       uses: actions/setup-node@v1
+       with:
+          node-version: 16
+     - name: Install Dependencies
+       run: | 
+            npm ci
+     - name: Running unit_tests
+       run: npm run unit_test
